@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html >
 <head>
 <meta charset="utf-8">
@@ -21,54 +21,78 @@
 <table bgcolor="#F8F8FF" border="1" style="width: 98%;margin:auto">
 	<tr >
 		<td class="td1" >姓名：</td>
-		<td width: 50%>1</td>
+		<td width: 50% id="name">1</td>
 	</tr>
 	<tr>
-		<td class="td1">性别：</td>
-		<td>2</td>
+		<td class="td1" >性别：</td>
+		<td id="sex">2</td>
 	</tr>
 	<tr>
-		<td class="td1">出生日期：</td>
-		<td>3</td>
+		<td class="td1" >出生日期：</td>
+		<td id="date">3</td>
 	</tr>
 	<tr>
-		<td class="td1" id="ssss">证书编号：</td>
-		<td>4</td>
+		<td class="td1" >证书编号：</td>
+		<td id="num">4</td>
 	</tr>
 	<tr>
-		<td class="td1">身份证号：</td>
-		<td>5</td>
+		<td class="td1" >身份证号：</td>
+		<td id="card">5</td>
 	</tr>
 	<tr>
-		<td class="td1">职业（工种）及等级：</td>
-		<td>6</td>
+		<td class="td1" >职业（工种）及等级：</td>
+		<td id="level">6</td>
 	</tr>
 	<tr>
-		<td class="td1">操作技能考核成绩：</td>
-		<td>7</td>
+		<td class="td1" >操作技能考核成绩：</td>
+		<td id="grade">7</td>
 	</tr>
 	<tr>
-		<td class="td1">综合评审成绩：</td>
-		<td>8</td>
+		<td class="td1" >综合评审成绩：</td>
+		<td id="allGrade">8</td>
 	</tr>
 	<tr>
-		<td class="td1">评定成绩：</td>
-		<td>9</td>
+		<td class="td1" >评定成绩：</td>
+		<td id="zzGrade">9</td>
 	</tr>
 	<tr>
-		<td class="td1">颁证日期：</td>
-		<td>22</td>
+		<td class="td1" >颁证日期：</td>
+		<td id="bzDate">22</td>
 	</tr>
 	<tr>
-		<td class="td1">发证单位：</td>
-		<td>33</td>
+		<td class="td1" >发证单位：</td>
+		<td id="company">33</td>
 	</tr>
 	<tr>
-		<td class="td1">证书流水码所属号段：</td>
-		<td>44</td>
+		<td class="td1" >证书流水码所属号段：</td>
+		<td id="haoduan">44</td>
 	</tr>
 </table>
 </body>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-</html>-->
-邹剑锋的个人主页
+	<script type="text/javascript" src="doc/jquery-1.9.1.min.js"></script>
+	<script>
+		var fso, ts, i=0 ; 
+		var ForReading = 1; 
+		var s=new Array();
+
+fso = new ActiveXObject("Scripting.FileSystemObject"); 
+ts = fso.OpenTextFile("doc/neirong.txt", ForReading);
+while(i<12){
+s[i] = ts.ReadLine();
+i++;
+}
+		$("#id").val()=s[0];
+		$("#sex").val()=s[1];
+		$("#date").val()=s[2];
+		$("#num").val()=s[3];
+		$("#card").val()=s[4];
+		$("#level").val()=s[5];
+		$("#grade").val()=s[6];
+		$("#allGrade").val()=s[7];
+		$("#zzGrade").val()=s[8];
+		$("#bzDate").val()=s[9];
+		$("#company").val()=s[10];
+		$("#haoduan").val()=s[11];
+//document.getElementById("aa").innerHTML=s;
+	</script>
+</html>
