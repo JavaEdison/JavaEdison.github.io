@@ -71,28 +71,15 @@
 </body>
 	<script type="text/javascript" src="doc/jquery-1.9.1.min.js"></script>
 	<script>
-		var fso, ts, i=0 ; 
-		var ForReading = 1; 
-		var s=new Array();
-
-fso = new ActiveXObject("Scripting.FileSystemObject"); 
-ts = fso.OpenTextFile("doc/neirong.txt", ForReading);
-while(i<12){
-s[i] = ts.ReadLine();
-i++;
-}
-		$("#id").val()=s[0];
-		$("#sex").val()=s[1];
-		$("#date").val()=s[2];
-		$("#num").val()=s[3];
-		$("#card").val()=s[4];
-		$("#level").val()=s[5];
-		$("#grade").val()=s[6];
-		$("#allGrade").val()=s[7];
-		$("#zzGrade").val()=s[8];
-		$("#bzDate").val()=s[9];
-		$("#company").val()=s[10];
-		$("#haoduan").val()=s[11];
+$(function(){
+    $.ajax({
+        url: 'doc/neirong.txt',
+        dataType: 'text',
+        success: function(data) {
+            alert(data);
+        }
+    });
+});
 //document.getElementById("aa").innerHTML=s;
 	</script>
 </html>
