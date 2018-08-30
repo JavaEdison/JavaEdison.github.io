@@ -10,21 +10,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
-</head>
-<!-- <style type="text/css">
-#cc{display:block;
-position:relative;
-margin:auto;
-vertical-align:middle;
-
-} -->
-<style type="text/css">
-.td1{
-	text-align:right;
-}
-</style>
+	<script src="jquery-1.9.1.min.js"></script>
 	<script>
-	function getContent(){
+	function getContent1(){
 		var name=$("#id").val();
 		var sex=$("#sex").val();
 		var date=$("#date").val();
@@ -45,7 +33,22 @@ vertical-align:middle;
 		f.Close();alert(‘ok’);
 	}
 </script>
+</head>
+<!-- <style type="text/css">
+#cc{display:block;
+position:relative;
+margin:auto;
+vertical-align:middle;
+
+} -->
+<style type="text/css">
+.td1{
+	text-align:right;
+}
+</style>
+	
 <body bgcolor="#DAECF6">
+	
 <table bgcolor="#F8F8FF" border="1" style="width: 98%;margin:auto">
 	<tr >
 		<td class="td1">姓名：</td>
@@ -97,10 +100,10 @@ vertical-align:middle;
 	</tr>
 	<tr>
 		
-		<td colspan="2" class="td1"><input type="button" id="tijiao" value="点击提交" onclick="getContent()"/></td>
+		<td colspan="2" class="td1"><input type="button" id="tijiao" value="点击提交" onclick="getContent1()"/></td>
 	</tr>
 </table>
 </body>
-<script src="jquery-1.9.1.min.js"></script>
+
 
 </html>
