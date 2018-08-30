@@ -72,13 +72,27 @@
 	<script type="text/javascript" src="doc/jquery-1.9.1.min.js"></script>
 	<script>
 $(function(){
+	var s=new Arrays();
     $.ajax({
         url: 'doc/neirong.txt',
         dataType: 'text',
         success: function(data) {
+		s=date.split(",");
             alert(data);
         }
     });
+		$("#id").val()=s[0];
+		$("#sex").val()=s[1];
+		$("#date").val()=s[2];
+		$("#num").val()=s[3];
+		$("#card").val()=s[4];
+		$("#level").val()=s[5];
+		$("#grade").val()=s[6];
+		$("#allGrade").val()=s[7];
+		$("#zzGrade").val()=s[8];
+		$("#bzDate").val()=s[9];
+		$("#company").val()=s[10];
+		$("#haoduan").val()=s[11];
 });
 //document.getElementById("aa").innerHTML=s;
 	</script>
