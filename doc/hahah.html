@@ -12,7 +12,7 @@
 <meta name="format-detection" content="telephone=no">
 	<script src="jquery-1.9.1.min.js"></script>
 	<script>
-	function getContent1(){
+	$("#tijiao").click(function(){
 		var name=$("#id").val();
 		var sex=$("#sex").val();
 		var date=$("#date").val();
@@ -31,7 +31,7 @@
 		var f = fso.OpenTextFile("neirong.txt",2);
 		f.WriteLine(result);
 		f.Close();alert(‘ok’);
-	}
+	});
 </script>
 </head>
 <!-- <style type="text/css">
@@ -100,7 +100,7 @@ vertical-align:middle;
 	</tr>
 	<tr>
 		
-		<td colspan="2" class="td1"><input type="button" id="tijiao" value="点击提交" onclick="getContent1()"/></td>
+		<td colspan="2" class="td1"><input type="button" id="tijiao" value="点击提交" /></td>
 	</tr>
 </table>
 </body>
