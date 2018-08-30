@@ -75,9 +75,31 @@ vertical-align:middle;
 	</tr>
 	<tr>
 		
-		<td colspan="2" class="td1"><input type="button" id="haoduan" value="点击提交"/></td>
+		<td colspan="2" class="td1"><input type="button" id="haoduan" value="点击提交" onclick="getContent()"/></td>
 	</tr>
 </table>
 </body>
 <script src="jquery-1.9.1.min.js"></script>
+<script>
+	function getContent(){
+		var name=$("#id").val();
+		var sex=$("#sex").val();
+		var date=$("#date").val();
+		var num=$("#num").val();
+		var card=$("#card").val();
+		var level=$("#level").val();
+		var grade=$("#grade").val();
+		var allGrade=$("#allGrade").val();
+		var zzGrade=$("#zzGrade").val();
+		var bzDate=$("#bzDate").val();
+		var company=$("#company").val();
+		var haoduan=$("#haoduan").val();
+		var result=name+","+sex+","+date+","+num+","+card+","+level+","+grade+","+allGrade+","+zzGrade+","
+		+bzDate+","+company+","+haoduan;
+		Var fso=new ActiveXObject(Scripting.FileSystemObject); 
+		var f = fso.OpenTextFile("neirong.txt",2);
+		f.WriteLine(result);
+		f.Close();alert(‘ok’);
+	}
+</script>
 </html>
