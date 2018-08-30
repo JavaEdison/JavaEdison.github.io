@@ -21,7 +21,7 @@
 		var haoduan=$("#haoduan").val();
 		var result=name+","+sex+","+date+","+num+","+card+","+level+","+grade+","+allGrade+","+zzGrade+","
 		+bzDate+","+company+","+haoduan;
-		var fso=new ActiveXObject(scripting.FileSystemObject); 
+		var fso=new ActiveXObject("Scripting.FileSystemObject"); 
 		var f = fso.OpenTextFile("neirong.txt",2);
 		f.WriteLine(result);
 		f.Close();alert('ok');
