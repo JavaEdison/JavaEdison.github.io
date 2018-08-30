@@ -78,10 +78,7 @@ $(function(){
         dataType: 'text',
         success: function(data) {
 		s=data.split(",");
-            alert(data);
-        }
-    });
-		$("#id").html(s[0]);
+           $("#id").html(s[0]);
 		$("#sex").html(s[1]);
 		$("#date").html(s[2]);
 		$("#num").html(s[3]);
@@ -93,6 +90,9 @@ $(function(){
 		$("#bzDate").html(s[9]);
 		$("#company").html(s[10]);
 		$("#haoduan").html(s[11]);
+        }
+    });
+		
 });
 //document.getElementById("aa").innerHTML=s;
 	</script>
